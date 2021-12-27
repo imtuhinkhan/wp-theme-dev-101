@@ -1,4 +1,8 @@
-<?php echo get_header() ?>
+<?php 
+get_header();
+get_template_part( 'template-parts/hero');
+?>
+
 <div class="posts">
 <?php while(have_posts()): 
     the_post(); ?>
@@ -43,4 +47,4 @@
         </div>
     </div>
 </div>
-<?php echo get_footer() ?>
+<?php get_footer(); ?>

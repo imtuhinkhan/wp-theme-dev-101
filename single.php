@@ -1,4 +1,8 @@
-<?php echo get_header() ?>
+<?php 
+get_header();
+get_template_part( 'template-parts/hero');
+?>
+<?php while(have_posts()): the_post();?>
 <div class="posts">
     <div class="post" <?php post_class(); ?>>
         <div class="container">
@@ -15,7 +19,12 @@
                     </p>
                     <?php echo get_the_tag_list('<ul class="list-unstyled">
                         <li>','</li><li>','</li></ul>') ?>
-                    
+                   
+                   <?php 
+                    if(is_active_sidebar('sidebar-left')){
+                        dynamic_sidebar('sidebar-left');
+                    }
+                    ?>
                 </div>
                 <div class="col-md-8">
                     <p>
@@ -30,6 +39,11 @@
                     }
                     ?>
                 </div>
+                <?php 
+                
+                    echo  '<span class="">'.get_previous_post_link().'</span>';
+                    echo '<span class="">'.get_next_post_link().'</span>';
+                ?>
             </div>
 
             
@@ -37,4 +51,5 @@
         </div>
     </div>
 </div>
-<?php echo get_footer() ?>
+<?php endwhile ?>
+<?php get_footer() ?>

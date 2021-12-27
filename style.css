@@ -11,7 +11,7 @@ Requires PHP: 5.6
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: c
+Text Domain: duatheme
 Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 D Theme is a WordPress Theme, (C) 2020 tuhinkhan.com
@@ -69,4 +69,13 @@ h2.post-title {
 
 .tags li{
     color: #3D9970;
+}
+
+.next-post a{
+    color:#fff!important;
+    float: right;
+}
+
+.previous-post a{
+    color:rgb(247, 245, 245)!important;
 }
